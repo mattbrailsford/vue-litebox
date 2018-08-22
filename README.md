@@ -46,18 +46,18 @@ var app = new Vue({
 ````
 
 ### Options
-* **items** Array of url strings and/or objects with a `src` property
-* **startAt** The index at which to start the lightbox
-* **closeCaption** The caption to display on the close button. Defaults to 'Close'
-* **prevCaption** The caption to display on the prev arrow button. Defaults to 'Previous'
-* **nextCaption** The caption to display on the next arrow button. Defaults to 'Next'
-* **loadingCaption** The caption to display whilst loading a media item. Defaults to 'Loading...'
-* **videoRegex** The regex to match for video URLs which will displayed in a 16:9 ration iframe. Defaults to `/youtube.com|vimeo.com/`
-* **closeOnEsc** Define whether to close the lightbox on `Esc` key press. Defaults to `true`
-* **nextOnImageClick** Define whether clicking an image moves you to the next image. Defaults to `true`
+* **items:** Array of url strings and/or objects with a `src` property
+* **startAt:** The index at which to start the lightbox
+* **closeCaption:** The caption to display on the close button. Defaults to 'Close'
+* **prevCaption:** The caption to display on the prev arrow button. Defaults to 'Previous'
+* **nextCaption:** The caption to display on the next arrow button. Defaults to 'Next'
+* **loadingCaption:** The caption to display whilst loading a media item. Defaults to 'Loading...'
+* **videoRegex:** The regex to match for video URLs which will displayed in a 16:9 ration iframe. Defaults to `/youtube.com|vimeo.com/`
+* **closeOnEsc:** Define whether to close the lightbox on `Esc` key press. Defaults to `true`
+* **nextOnImageClick:** Define whether clicking an image moves you to the next image. Defaults to `true`
 
 ### Events
-* **close** Fired when the close button is clicked or `Esc` key is pressed with `closeOnEsc` enabled
+* **close:** Fired when the close button is clicked or `Esc` key is pressed with `closeOnEsc` enabled
 
 ### Slots
 #### loading
