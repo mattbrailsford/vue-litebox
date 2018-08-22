@@ -1,6 +1,8 @@
 # vue-litebox
 A lightweight, zero dependency lightbox implementation for vuejs.
 
+![vue-litebox](screenshot.png)
+
 Out of the box `vue-litebox` is pretty ugly looking, but this is because it ships with the absolute minimum CSS in order to provide the lightbox functionality. The making it look pretty is left to the implementor as I find that one size doesn't always fit all.
 
 Supports images as well as youtube and vimeo videos.
