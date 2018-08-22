@@ -56,6 +56,9 @@ var app = new Vue({
 * **closeOnEsc** Define whether to close the lightbox on `Esc` key press. Defaults to `true`
 * **nextOnImageClick** Define whether clicking an image moves you to the next image. Defaults to `true`
 
+### Events
+* **close** Fired when the close button is clicked or `Esc` key is pressed with `closeOnEsc` enabled
+
 ### Slots
 #### loading
 Provide custom markup for the loading overlay
