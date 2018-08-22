@@ -59,25 +59,32 @@ Provide custom markup for the loading overlay
 #### close
 Provide custom markup for the close button
 ````html
-<button type="button" slot="close" slot-scope="{ closeProps, closeEvents }" v-bind="closeProps" v-on="closeEvents">x</button>
+<button type="button" 
+    slot="close" slot-scope="{ closeProps, closeEvents }" 
+    v-bind="closeProps" v-on="closeEvents">x</button>
 ````
 
 #### prev
 Provide custom markup for the prev button
 ````html
-<button type="button" slot="prev" slot-scope="{ prevProps, prevEvents }" v-bind="prevProps" v-on="prevEvents">&lt;</button>
+<button type="button" 
+    slot="prev" slot-scope="{ prevProps, prevEvents }" 
+    v-bind="prevProps" v-on="prevEvents">&lt;</button>
 ````
 
 #### next
 Provide custom markup for the next button
 ````html
-<button type="button" slot="next" slot-scope="{ nextProps, nextEvents }" v-bind="nextProps" v-on="nextEvents">&lg;</button>
+<button type="button" 
+    slot="next" slot-scope="{ nextProps, nextEvents }" 
+    v-bind="nextProps" v-on="nextEvents">&lg;</button>
 ````
 
 #### caption
 Provide custom markup for the next button
 ````html
-<figcaption slot="caption" slot-scope="{ captionProps, currentItem, currentItemIndex, totalItems }" v-bind="captionProps">
+<figcaption slot="caption" slot-scope="{ captionProps, currentItem, currentItemIndex, totalItems }" 
+    v-bind="captionProps">
     <div class="vlb-caption-title" v-if="currentItem.title">{{currentItem.title}}</div>
     <div class="vlb-caption-count">{{currentItemIndex + 1}}/{{totalItems}}</div>
 </figcaption>
