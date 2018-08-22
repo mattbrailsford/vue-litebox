@@ -6,7 +6,7 @@
                 <div class="vlb-content" :class="directionClass">
                     <div class="vlb-close-wrapper" v-if="!loading && !navDelayed">
                         <slot name="close" :close-props="closeProps" :close-events="closeEvents">
-                            <button type="button" :title="closeCaption" v-bind="closeProps" v-on="closeEvents">x</button>
+                            <button type="button" v-bind="closeProps" v-on="closeEvents">x</button>
                         </slot>
                     </div>
                     <figure class="vlb-figure">
@@ -25,10 +25,10 @@
                 </div>
                 <div class="vlb-arrows" v-if="items.length > 1">
                     <slot name="prev" :prev-props="prevProps" :prev-events="prevEvents">
-                        <button type="button" :title="prevCaption" v-bind="prevProps" v-on="prevEvents">&lt;</button>
+                        <button type="button" v-bind="prevProps" v-on="prevEvents">&lt;</button>
                     </slot>
                     <slot name="next" :next-props="nextProps" :next-events="nextEvents">
-                        <button type="button" :title="nextCaption" v-bind="nextProps" v-on="nextEvents">&gt;</button>
+                        <button type="button" v-bind="nextProps" v-on="nextEvents">&gt;</button>
                     </slot>
                 </div>
             </div>
@@ -84,7 +84,8 @@ export default {
             direction: 'init',
             currentItemIndex: self.startIndex,
             closeProps: {
-                class: 'vlb-close'
+                class: 'vlb-close',
+                title: self.closeCaption
             },
             closeEvents: {
                 click(e) {
@@ -93,7 +94,8 @@ export default {
                 }
             },
             prevProps: {
-                class: 'vlb-arrow vlb-arrow--prev'
+                class: 'vlb-arrow vlb-arrow--prev',
+                title: self.prevCaption
             },
             prevEvents: {
                 click(e) {
@@ -102,7 +104,8 @@ export default {
                 }
             },
             nextProps: {
-                class: 'vlb-arrow vlb-arrow--next'
+                class: 'vlb-arrow vlb-arrow--next',
+                title: self.nextCaption
             },
             nextEvents: {
                 click(e) {
