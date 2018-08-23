@@ -1,0 +1,39 @@
+{
+  "name": "vue-litebox",
+  "version": "1.0.0",
+  "description": "A lightweight, zero dependency lightbox implementation for vuejs",
+  "main": "dist/vue-litebox.umd.js",
+  "module": "dist/vue-litebox.esm.js",
+  "unpkg": "dist/vue-litebox.min.js",
+  "browser": {
+    "./sfc": "src/vue-litebox.vue"
+  },
+  "scripts": {
+    "build": "npm run build:umd & npm run build:es & npm run build:unpkg",
+    "build:umd": "rollup --config build/rollup.config.js --format umd --file dist/vue-litebox.umd.js",
+    "build:es": "rollup --config build/rollup.config.js --format es --file dist/vue-litebox.esm.js",
+    "build:unpkg": "rollup --config build/rollup.config.js --format iife --file dist/vue-litebox.min.js"
+  },
+  "devDependencies": {
+    "rollup": "^0.64.1",
+    "rollup-plugin-babel-minify": "^5.0.0",
+    "rollup-plugin-buble": "^0.19.2",
+    "rollup-plugin-vue": "^4.3.2",
+    "vue": "^2.5.17",
+    "vue-template-compiler": "^2.5.17"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/mattbrailsford/vue-litebox.git"
+  },
+  "keywords": [
+    "lightbox",
+    "vuejs"
+  ],
+  "author": "Matt Brailsford",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/mattbrailsford/vue-litebox/issues"
+  },
+  "homepage": "https://github.com/mattbrailsford/vue-litebox#readme"
+}
