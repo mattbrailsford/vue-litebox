@@ -50,7 +50,7 @@ export default {
             type: Array,
             required: true
         },
-        startIndex: {
+        startAt: {
             type: Number,
             default: 0
         },
@@ -82,7 +82,7 @@ export default {
             loading: true,
             navDelayed: false,
             direction: 'init',
-            currentItemIndex: self.startIndex,
+            currentItemIndex: self.startAt,
             closeProps: {
                 class: 'vlb-close'
             },
