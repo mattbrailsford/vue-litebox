@@ -10,7 +10,7 @@ export default {
         exports: 'named',
     },
     plugins: [
-        css({ output: 'dist/vue-lightbox.css' }),
+        css({ output: 'dist/vue-litebox.css' }),
         vue({
             css: false, // Export css to file
             compileTemplate: true, // Explicitly convert template to render function
