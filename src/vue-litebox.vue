@@ -1,9 +1,9 @@
 <template>
-    <div class="vlb-element" :class="{ 'vlb-element--loading': loading }">
+    <div class="vlb-element" :class="{ 'vlb-element--loading': navDelayed || loading }" @click="close">
         <div class="vlb-overlay"></div>
         <div class="vlb-wrapper-outer">
             <div class="vlb-wrapper-inner">
-                <div class="vlb-content" :class="directionClass">
+                <div class="vlb-content" :class="directionClass" @click.stop>
                     <div class="vlb-close-wrapper" v-if="!loading && !navDelayed">
                         <slot name="close" :close-props="closeProps" :close-events="closeEvents">
                             <button type="button" :title="closeCaption" v-bind="closeProps" v-on="closeEvents">x</button>
@@ -257,7 +257,6 @@ export default {
     display: inline-block;
     vertical-align: middle;
     margin: 0px auto;
-    padding: 0 1rem;
     text-align: left;
     max-width: 100%;
     z-index: 2020;

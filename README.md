@@ -7,10 +7,24 @@ Out of the box `vue-litebox` is pretty ugly looking, but this is because it ship
 
 Supports images as well as youtube and vimeo videos.
 
+## Instalation
+Install via `npm` 
+
+````bash
+npm install vue-litebox --save
+````
+
+or include via a script tag for browser based projects
+
+````html
+<script src="https://unpkg.com/vue-litebox"></script>
+````
+
 ## Usage
+**NB** If included via a script tag, the component will be regisered globally so the following `import` and `components` declarations in the example below won't be necesary.
 
 ````javascript
-import VueLitebox from './VueLitebox.vue'
+import VueLitebox from 'vue-litebox'
 
 var app = new Vue({
   el: '#app',
