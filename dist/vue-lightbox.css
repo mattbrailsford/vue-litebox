@@ -1,0 +1,107 @@
+
+.vlb-element {
+  box-sizing: border-box;
+}
+.vlb-element *, .vlb-element *:before, .vlb-element *:after {
+  box-sizing: inherit;
+}
+.vlb-overlay, .vlb-wrapper-outer, .vlb-wrapper-inner {
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+}
+.vlb-overlay {
+  background-color: #000;
+  opacity: 0.7;
+  overflow: hidden;
+  z-index: 2000;
+}
+.vlb-wrapper-outer {
+  overflow-x: hidden;
+  overflow-y: auto;
+  z-index: 2010;
+}
+.vlb-wrapper-inner {
+  position: absolute;
+  text-align: center;
+}
+.vlb-wrapper-inner:before {
+  content: "";
+  display: inline-block;
+  height: 100%;
+  vertical-align: middle;
+}
+.vlb-content {
+  position: relative;
+  display: inline-block;
+  vertical-align: middle;
+  margin: 0px auto;
+  text-align: left;
+  max-width: 100%;
+  z-index: 2020;
+}
+.vlb-figure {
+  position: relative;
+  padding: 0;
+  margin: 0;
+  z-index: 10;
+}
+.vlb-image {
+  width: auto;
+  max-width: 100%;
+  height: auto;
+  display: block;
+  line-height: 0;
+  margin: 0 auto;
+}
+.vlb-frame-wrapper {
+  position: relative;
+  width: 853px; /* Largest YouTube embed size */
+  max-width: 100%;
+}
+.vlb-frame-sizer {
+  position: relative;
+  width: 100%;
+  height: 0;
+  overflow: hidden;
+  padding-top: 56.25%;
+}
+.vlb-frame {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+.vlb-caption {
+  display: block;
+}
+.vlb-close-wrapper {
+  position: relative;
+  text-align: right;
+  z-index: 20;
+}
+.vlb-arrows {
+  position: fixed;
+  top: 50%;
+  left: 0;
+  right: 0;
+  z-index: 2030;
+}
+.vlb-close, .vlb-arrow {
+  cursor: pointer;
+}
+.vlb-arrow {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  overflow: hidden;
+}
+.vlb-arrow--prev {
+  left: 0;
+}
+.vlb-arrow--next {
+  right: 0;
+}
